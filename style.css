@@ -1,0 +1,133 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.configurator {
+    display: flex;
+    width: 900px;
+    height: 600px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.stage-wrapper {
+    flex-basis: 55%;
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.stage-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222;
+}
+
+.stage-wrapper h1 {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: #00eaff;
+    font-weight: 700;
+    z-index: 10;
+}
+
+#stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.tron-vehicle {
+    position: absolute;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+
+    opacity: 0;
+    transform: translateX(-100%);
+    
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                opacity 0.4s ease-out;
+}
+
+.tron-vehicle.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.options-panel {
+    flex-basis: 45%;
+    padding: 30px;
+    overflow-y: auto;
+    background: #fdfdfd;
+}
+
+.options-panel h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.option-group {
+    margin-bottom: 20px;
+}
+
+.option-group h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.option-choices {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.option-btn {
+    border: 2px solid #ddd;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.option-btn img {
+    width: 100%;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.option-btn span {
+    font-size: 13px;
+    color: #555;
+    font-weight: 700;
+}
+
+.option-btn:hover {
+    border-color: #aaa;
+}
+
+.option-btn.active {
+    border-color: #00eaff; 
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+}

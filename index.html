@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tron Vehicle Selector</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="configurator">
+        <div class="stage-wrapper">
+            <div class="stage-background"></div>
+            <h1></h1>
+            
+            <div id="stage">
+                <img src="images/Tron1BG1.png" alt="Tron Cycle 1" class="tron-vehicle active" id="vehicle-1">
+                <img src="images/Tron3BG1.png" alt="Tron Cycle 3" class="tron-vehicle" id="vehicle-3">
+                <img src="images/Tron2CarBG1.png" alt="Tron Car" class="tron-vehicle" id="vehicle-4">
+            </div>
+        </div>
+
+        <div class="options-panel">
+            <h2>Select Vehicle</h2>
+
+            <div class="option-group">
+                <h3>Light Cycles</h3>
+                <div class="option-choices">
+                    <button class="option-btn active" data-target="vehicle-1">
+                        <img src="images/Tron1BG1.png" alt="Cycle 1">
+                        <span>Red Cycle</span>
+                    </button>
+                    <button class="option-btn" data-target="vehicle-3">
+                        <img src="images/Tron3BG1.png" alt="Cycle 3">
+                        <span>Modern Cycle</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="option-group">
+                <h3>Light Runners</h3>
+                <div class="option-choices">
+                    <button class="option-btn" data-target="vehicle-4">
+                        <img src="images/Tron2CarBG1.png" alt="Car">
+                        <span>Blue Runner</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
